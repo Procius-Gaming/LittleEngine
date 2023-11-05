@@ -16,3 +16,6 @@
     #define LITTLE_API
     #pragma warning Unknown dynamic link import/export semantics.
 #endif
+
+
+#define BIT(x) (1 << x)

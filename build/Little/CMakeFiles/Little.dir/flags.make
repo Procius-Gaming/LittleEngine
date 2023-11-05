@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DLE_BUILD_DLL -DLE_PLATFORM_LINUX -DLittle_EXPORTS -DUNICODE
 
-CXX_INCLUDES = -I/home/nesmy/Playground/LittleEngine/Little/include -I/home/nesmy/Playground/LittleEngine/Little/../vendor/glad/include -I/home/nesmy/Playground/LittleEngine/Little/../vendor/glfw/include -I/home/nesmy/Playground/LittleEngine/Little/../vendor/spdlog/include
+CXX_INCLUDES = -I/home/nesmy/Playground/LittleEngine/Little/include -I/home/nesmy/Playground/LittleEngine/Little/include/Events -I/home/nesmy/Playground/LittleEngine/Little/../vendor/glad/include -I/home/nesmy/Playground/LittleEngine/Little/../vendor/glfw/include -I/home/nesmy/Playground/LittleEngine/Little/../vendor/spdlog/include
 
 CXX_FLAGS = -fPIC -std=gnu++14
 

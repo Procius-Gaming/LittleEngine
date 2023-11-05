@@ -1,5 +1,8 @@
 #include "Application.h"
 
+#include "ApplicationEvent.h"
+#include "Log.h"
+
 namespace Little {
 
     Application::Application()
@@ -12,7 +15,10 @@ namespace Little {
 
 		void Application::Run()
 		{
-				while(true);
+			WindowResizeEvent e(1280, 720);
+			LE_TRACE(e);
+
+			while(true);
 		}
 
 }
