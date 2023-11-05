@@ -22,6 +22,7 @@ add_compile_definitions(UNICODE LE_PLATFORM_LINUX LE_BUILD_DLL)
 target_include_directories(${PROJECT_NAME}
 				PUBLIC include
 				PUBLIC include/Events
+				PUBLIC inlcude/Platform
 				PUBLIC ../vendor/glad/include
 				PUBLIC ../vendor/glfw/include
 				PUBLIC ../vendor/spdlog/include
