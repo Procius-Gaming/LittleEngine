@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Little.dir/src/Application.cpp.o.d"
   "CMakeFiles/Little.dir/src/Core.cpp.o"
   "CMakeFiles/Little.dir/src/Core.cpp.o.d"
+  "CMakeFiles/Little.dir/src/Log.cpp.o"
+  "CMakeFiles/Little.dir/src/Log.cpp.o.d"
   "libLittle.pdb"
   "libLittle.so"
 )

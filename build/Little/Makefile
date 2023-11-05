@@ -193,6 +193,30 @@ src/Core.cpp.s:
 	cd /home/nesmy/Playground/LittleEngine/build && $(MAKE) $(MAKESILENT) -f Little/CMakeFiles/Little.dir/build.make Little/CMakeFiles/Little.dir/src/Core.cpp.s
 .PHONY : src/Core.cpp.s
 
+src/Log.o: src/Log.cpp.o
+.PHONY : src/Log.o
+
+# target to build an object file
+src/Log.cpp.o:
+	cd /home/nesmy/Playground/LittleEngine/build && $(MAKE) $(MAKESILENT) -f Little/CMakeFiles/Little.dir/build.make Little/CMakeFiles/Little.dir/src/Log.cpp.o
+.PHONY : src/Log.cpp.o
+
+src/Log.i: src/Log.cpp.i
+.PHONY : src/Log.i
+
+# target to preprocess a source file
+src/Log.cpp.i:
+	cd /home/nesmy/Playground/LittleEngine/build && $(MAKE) $(MAKESILENT) -f Little/CMakeFiles/Little.dir/build.make Little/CMakeFiles/Little.dir/src/Log.cpp.i
+.PHONY : src/Log.cpp.i
+
+src/Log.s: src/Log.cpp.s
+.PHONY : src/Log.s
+
+# target to generate assembly for a file
+src/Log.cpp.s:
+	cd /home/nesmy/Playground/LittleEngine/build && $(MAKE) $(MAKESILENT) -f Little/CMakeFiles/Little.dir/build.make Little/CMakeFiles/Little.dir/src/Log.cpp.s
+.PHONY : src/Log.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -211,6 +235,9 @@ help:
 	@echo "... src/Core.o"
 	@echo "... src/Core.i"
 	@echo "... src/Core.s"
+	@echo "... src/Log.o"
+	@echo "... src/Log.i"
+	@echo "... src/Log.s"
 .PHONY : help
 
 

@@ -98,12 +98,12 @@ Little/clean: Little/CMakeFiles/Little.dir/clean
 CMakeFiles/SandBox.dir/all: Little/CMakeFiles/Little.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandBox.dir/build.make CMakeFiles/SandBox.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandBox.dir/build.make CMakeFiles/SandBox.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nesmy/Playground/LittleEngine/build/CMakeFiles --progress-num=5,6 "Built target SandBox"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nesmy/Playground/LittleEngine/build/CMakeFiles --progress-num=6,7 "Built target SandBox"
 .PHONY : CMakeFiles/SandBox.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SandBox.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nesmy/Playground/LittleEngine/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nesmy/Playground/LittleEngine/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SandBox.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nesmy/Playground/LittleEngine/build/CMakeFiles 0
 .PHONY : CMakeFiles/SandBox.dir/rule
@@ -124,12 +124,12 @@ CMakeFiles/SandBox.dir/clean:
 Little/CMakeFiles/Little.dir/all:
 	$(MAKE) $(MAKESILENT) -f Little/CMakeFiles/Little.dir/build.make Little/CMakeFiles/Little.dir/depend
 	$(MAKE) $(MAKESILENT) -f Little/CMakeFiles/Little.dir/build.make Little/CMakeFiles/Little.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nesmy/Playground/LittleEngine/build/CMakeFiles --progress-num=1,2,3,4 "Built target Little"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nesmy/Playground/LittleEngine/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target Little"
 .PHONY : Little/CMakeFiles/Little.dir/all
 
 # Build rule for subdir invocation for target.
 Little/CMakeFiles/Little.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nesmy/Playground/LittleEngine/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nesmy/Playground/LittleEngine/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Little/CMakeFiles/Little.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nesmy/Playground/LittleEngine/build/CMakeFiles 0
 .PHONY : Little/CMakeFiles/Little.dir/rule
