@@ -7,16 +7,25 @@ project(Little)
 set(HEADER_FILES
     include/lepch.h)
 
-file(GLOB SOURCES src/*.cpp)
+file(GLOB SOURCES src/**.cpp src/Platform/OpenGL/**.cpp)
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
 target_precompile_headers(${PROJECT_NAME} PRIVATE ${HEADER_FILES})
 
-add_compile_definitions(UNICODE LE_PLATFORM_LINUX LE_BUILD_DLL)
 
-#add_subdirectory(vendor/glad)
-#add_subdirectory(vendor/glfw)
+#if(UNIX)
+add_compile_definitions(UNICODE
+#LE_PLATFORM_LINUX LE_BUILD_DLL
+)
+#endif(UNIX)
+
+#if(WIN32)
+#add_compile_definitions(UNICODE LE_PLATFORM_LINUX LE_BUILD_DLL)
+#endif(WIN32)
+
+add_subdirectory(../vendor/glad glad)
+add_subdirectory(../vendor/glfw glfw)
 
 
 target_include_directories(${PROJECT_NAME}
@@ -26,4 +35,13 @@ target_include_directories(${PROJECT_NAME}
 				PUBLIC ../vendor/glad/include
 				PUBLIC ../vendor/glfw/include
 				PUBLIC ../vendor/spdlog/include
+				)
+
+target_link_libraries(${PROJECT_NAME}
+				glad
+				${OPENGL_LIBRARIES}
+				glfw
+				#imgui
+				#glm
+				#assimp
 				)

@@ -1,6 +1,7 @@
 #pragma once
 #include "Core.h"
 #include "Event.h"
+#include "Window.h"
 
 
 namespace Little {
@@ -12,6 +13,9 @@ namespace Little {
 		virtual ~Application();
 
 		void Run();
+	private:
+		std::unique_ptr<Window> m_Window;
+		bool m_Running = true;
 	};
 
 	// to be define in client

@@ -1,16 +1,17 @@
 #include "lepch.h"
-#include "OpenGL/OpenGLWindow.h"
+#include "Platform/OpenGL/OpenGLWindow.h"
+#include "Core.h"
 
 namespace Little {
 
 	static bool s_GLFWInitialized = false;
 
-	Window* Window::Create(const WindowPros& props)
+	Window* Window::Create(const WindowProps& props)
 	{
 		return new OpenGLWindow(props);
 	}
 
-	OpenGLWindow::OpenGLWindow(const WindowPros& props)
+	OpenGLWindow::OpenGLWindow(const WindowProps& props)
 	{
 		Init(props);
 	}
@@ -20,7 +21,7 @@ namespace Little {
 		Shutdown();
 	}
 
-	void OpenGLWindow::Init(const WindowPros& props)
+	void OpenGLWindow::Init(const WindowProps& props)
 	{
 		m_Data.Title = props.Title;
 		m_Data.Width = props.Width;
@@ -30,7 +31,7 @@ namespace Little {
 		if(!s_GLFWInitialized)
 		{
 			int success = glfwInit();
-			LE_CORE_ASSERT(success, "Could not Initialize GLFW!");
+			//LE_CORE_ASSERT(success, "Could not Initialize GLFW!");
 
 			s_GLFWInitialized = true;
 		}
@@ -48,7 +49,7 @@ namespace Little {
 
 	void OpenGLWindow::OnUpdate()
 	{
-		glfwPollEvent();
+		glfwPollEvents();
 		glfwSwapBuffers(m_Window);
 	}
 
@@ -62,5 +63,7 @@ namespace Little {
 		m_Data.VSync = enabled;
 	}
 
-
+    void OpenGLWindow::IsVSync() const
+    {
+    }
 }

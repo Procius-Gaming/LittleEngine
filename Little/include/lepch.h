@@ -14,3 +14,7 @@
 #include <unordered_set>
 
 #include "Log.h"
+
+#ifdef LE_PLATFORM_WINDOWS
+    #include <Windows.h>
+#endif

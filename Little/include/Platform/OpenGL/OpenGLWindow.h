@@ -2,14 +2,14 @@
 
 #include "Window.h"
 
-#include <GLFW/glf3.h>
+#include <GLFW/glfw3.h>
 
 namespace Little {
 
 	class OpenGLWindow : public Window
 	{
 	public:
-		OpenGLWindow(const WindowPros& props);
+		OpenGLWindow(const WindowProps& props);
 		virtual ~OpenGLWindow();
 
 		void OnUpdate() override;
@@ -22,7 +22,7 @@ namespace Little {
 		void SetVSync(bool enabled) override;
 		void IsVSync() const override;
 	private:
-		virtual void Init(const WindowPros& props);
+		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
@@ -37,6 +37,6 @@ namespace Little {
 		};
 
 		WindowData m_Data;
-	}
+	};
 
 }
