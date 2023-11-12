@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/SandBox.dir/src/SandBoxApp.cpp.obj"
-  "CMakeFiles/SandBox.dir/src/SandBoxApp.cpp.obj.d"
-  "SandBox.exe"
-  "SandBox.exe.manifest"
+  "CMakeFiles/SandBox.dir/src/SandBoxApp.cpp.o"
+  "CMakeFiles/SandBox.dir/src/SandBoxApp.cpp.o.d"
+  "SandBox"
   "SandBox.pdb"
-  "libSandBox.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

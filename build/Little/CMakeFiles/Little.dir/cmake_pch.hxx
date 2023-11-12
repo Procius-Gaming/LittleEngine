@@ -2,5 +2,5 @@
 
 #pragma GCC system_header
 #ifdef __cplusplus
-#include "D:/Playground/LittleEngine/Little/include/lepch.h"
+#include "/home/nesmy/Playground/LittleEngine/Little/include/lepch.h"
 #endif // __cplusplus

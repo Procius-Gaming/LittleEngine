@@ -9,6 +9,11 @@ namespace Little {
 
 	static bool s_GLFWInitialized = false;
 
+	static void GLFWErrorCallback(int error, const char* description)
+	{
+		LE_CORE_ERROR("GLFW Error ({0}): {1}", error, description);
+	}
+
 	Window* Window::Create(const WindowProps& props)
 	{
 		return new OpenGLWindow(props);
@@ -35,7 +40,7 @@ namespace Little {
 		{
 			int success = glfwInit();
 			//LE_CORE_ASSERT(success, "Could not Initialize GLFW!");
-
+			glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialized = true;
 		}
 

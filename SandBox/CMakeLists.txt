@@ -17,11 +17,13 @@ if(WIN32)
 add_compile_definitions( LE_PLATFORM_LINUX LE_BUILD_DLL)
 endif(WIN32)
 
+if(WIN32)
 add_custom_command(
     TARGET ${PROJECT_NAME} POST_BUILD 
     COMMAND ${CMAKE_COMMAND} -E copy "../build/Little/libLittle.dll" "../build"
     COMMENT "Copying dll to build directory"
 )
+endif(WIN32)
 
 
 target_include_directories(${PROJECT_NAME}

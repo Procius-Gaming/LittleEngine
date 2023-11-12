@@ -8,11 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/Playground/LittleEngine/SandBox/src/SandBoxApp.cpp" "CMakeFiles/SandBox.dir/src/SandBoxApp.cpp.obj" "gcc" "CMakeFiles/SandBox.dir/src/SandBoxApp.cpp.obj.d"
+  "/home/nesmy/Playground/LittleEngine/SandBox/src/SandBoxApp.cpp" "CMakeFiles/SandBox.dir/src/SandBoxApp.cpp.o" "gcc" "CMakeFiles/SandBox.dir/src/SandBoxApp.cpp.o.d"
   )
 
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/DependInfo.cmake"
+  "/home/nesmy/Playground/LittleEngine/build/Little/glad/CMakeFiles/glad.dir/DependInfo.cmake"
+  "/home/nesmy/Playground/LittleEngine/build/Little/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
