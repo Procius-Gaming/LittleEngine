@@ -116,12 +116,44 @@ Little/CMakeFiles/Little.dir/src/Core.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Little.dir/src/Core.cpp.s"
 	cd /home/nesmy/Playground/LittleEngine/build/Little && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx -S /home/nesmy/Playground/LittleEngine/Little/src/Core.cpp -o CMakeFiles/Little.dir/src/Core.cpp.s
 
+Little/CMakeFiles/Little.dir/src/Layer.cpp.o: Little/CMakeFiles/Little.dir/flags.make
+Little/CMakeFiles/Little.dir/src/Layer.cpp.o: /home/nesmy/Playground/LittleEngine/Little/src/Layer.cpp
+Little/CMakeFiles/Little.dir/src/Layer.cpp.o: Little/CMakeFiles/Little.dir/cmake_pch.hxx
+Little/CMakeFiles/Little.dir/src/Layer.cpp.o: Little/CMakeFiles/Little.dir/cmake_pch.hxx.gch
+Little/CMakeFiles/Little.dir/src/Layer.cpp.o: Little/CMakeFiles/Little.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nesmy/Playground/LittleEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Little/CMakeFiles/Little.dir/src/Layer.cpp.o"
+	cd /home/nesmy/Playground/LittleEngine/build/Little && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx -MD -MT Little/CMakeFiles/Little.dir/src/Layer.cpp.o -MF CMakeFiles/Little.dir/src/Layer.cpp.o.d -o CMakeFiles/Little.dir/src/Layer.cpp.o -c /home/nesmy/Playground/LittleEngine/Little/src/Layer.cpp
+
+Little/CMakeFiles/Little.dir/src/Layer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Little.dir/src/Layer.cpp.i"
+	cd /home/nesmy/Playground/LittleEngine/build/Little && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx -E /home/nesmy/Playground/LittleEngine/Little/src/Layer.cpp > CMakeFiles/Little.dir/src/Layer.cpp.i
+
+Little/CMakeFiles/Little.dir/src/Layer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Little.dir/src/Layer.cpp.s"
+	cd /home/nesmy/Playground/LittleEngine/build/Little && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx -S /home/nesmy/Playground/LittleEngine/Little/src/Layer.cpp -o CMakeFiles/Little.dir/src/Layer.cpp.s
+
+Little/CMakeFiles/Little.dir/src/LayerStack.cpp.o: Little/CMakeFiles/Little.dir/flags.make
+Little/CMakeFiles/Little.dir/src/LayerStack.cpp.o: /home/nesmy/Playground/LittleEngine/Little/src/LayerStack.cpp
+Little/CMakeFiles/Little.dir/src/LayerStack.cpp.o: Little/CMakeFiles/Little.dir/cmake_pch.hxx
+Little/CMakeFiles/Little.dir/src/LayerStack.cpp.o: Little/CMakeFiles/Little.dir/cmake_pch.hxx.gch
+Little/CMakeFiles/Little.dir/src/LayerStack.cpp.o: Little/CMakeFiles/Little.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nesmy/Playground/LittleEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Little/CMakeFiles/Little.dir/src/LayerStack.cpp.o"
+	cd /home/nesmy/Playground/LittleEngine/build/Little && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx -MD -MT Little/CMakeFiles/Little.dir/src/LayerStack.cpp.o -MF CMakeFiles/Little.dir/src/LayerStack.cpp.o.d -o CMakeFiles/Little.dir/src/LayerStack.cpp.o -c /home/nesmy/Playground/LittleEngine/Little/src/LayerStack.cpp
+
+Little/CMakeFiles/Little.dir/src/LayerStack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Little.dir/src/LayerStack.cpp.i"
+	cd /home/nesmy/Playground/LittleEngine/build/Little && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx -E /home/nesmy/Playground/LittleEngine/Little/src/LayerStack.cpp > CMakeFiles/Little.dir/src/LayerStack.cpp.i
+
+Little/CMakeFiles/Little.dir/src/LayerStack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Little.dir/src/LayerStack.cpp.s"
+	cd /home/nesmy/Playground/LittleEngine/build/Little && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx -S /home/nesmy/Playground/LittleEngine/Little/src/LayerStack.cpp -o CMakeFiles/Little.dir/src/LayerStack.cpp.s
+
 Little/CMakeFiles/Little.dir/src/Log.cpp.o: Little/CMakeFiles/Little.dir/flags.make
 Little/CMakeFiles/Little.dir/src/Log.cpp.o: /home/nesmy/Playground/LittleEngine/Little/src/Log.cpp
 Little/CMakeFiles/Little.dir/src/Log.cpp.o: Little/CMakeFiles/Little.dir/cmake_pch.hxx
 Little/CMakeFiles/Little.dir/src/Log.cpp.o: Little/CMakeFiles/Little.dir/cmake_pch.hxx.gch
 Little/CMakeFiles/Little.dir/src/Log.cpp.o: Little/CMakeFiles/Little.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nesmy/Playground/LittleEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Little/CMakeFiles/Little.dir/src/Log.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nesmy/Playground/LittleEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Little/CMakeFiles/Little.dir/src/Log.cpp.o"
 	cd /home/nesmy/Playground/LittleEngine/build/Little && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx -MD -MT Little/CMakeFiles/Little.dir/src/Log.cpp.o -MF CMakeFiles/Little.dir/src/Log.cpp.o.d -o CMakeFiles/Little.dir/src/Log.cpp.o -c /home/nesmy/Playground/LittleEngine/Little/src/Log.cpp
 
 Little/CMakeFiles/Little.dir/src/Log.cpp.i: cmake_force
@@ -137,7 +169,7 @@ Little/CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o: /home/nesmy
 Little/CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o: Little/CMakeFiles/Little.dir/cmake_pch.hxx
 Little/CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o: Little/CMakeFiles/Little.dir/cmake_pch.hxx.gch
 Little/CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o: Little/CMakeFiles/Little.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nesmy/Playground/LittleEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Little/CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nesmy/Playground/LittleEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Little/CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o"
 	cd /home/nesmy/Playground/LittleEngine/build/Little && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx -MD -MT Little/CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o -MF CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o.d -o CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o -c /home/nesmy/Playground/LittleEngine/Little/src/Platform/OpenGL/OpenGLWindow.cpp
 
 Little/CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.i: cmake_force
@@ -152,6 +184,8 @@ Little/CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.s: cmake_force
 Little_OBJECTS = \
 "CMakeFiles/Little.dir/src/Application.cpp.o" \
 "CMakeFiles/Little.dir/src/Core.cpp.o" \
+"CMakeFiles/Little.dir/src/Layer.cpp.o" \
+"CMakeFiles/Little.dir/src/LayerStack.cpp.o" \
 "CMakeFiles/Little.dir/src/Log.cpp.o" \
 "CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o"
 
@@ -161,6 +195,8 @@ Little_EXTERNAL_OBJECTS =
 Little/libLittle.so: Little/CMakeFiles/Little.dir/cmake_pch.hxx.gch
 Little/libLittle.so: Little/CMakeFiles/Little.dir/src/Application.cpp.o
 Little/libLittle.so: Little/CMakeFiles/Little.dir/src/Core.cpp.o
+Little/libLittle.so: Little/CMakeFiles/Little.dir/src/Layer.cpp.o
+Little/libLittle.so: Little/CMakeFiles/Little.dir/src/LayerStack.cpp.o
 Little/libLittle.so: Little/CMakeFiles/Little.dir/src/Log.cpp.o
 Little/libLittle.so: Little/CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o
 Little/libLittle.so: Little/CMakeFiles/Little.dir/build.make
@@ -169,7 +205,7 @@ Little/libLittle.so: Little/glfw/src/libglfw3.a
 Little/libLittle.so: /usr/lib/x86_64-linux-gnu/librt.a
 Little/libLittle.so: /usr/lib/x86_64-linux-gnu/libm.so
 Little/libLittle.so: Little/CMakeFiles/Little.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nesmy/Playground/LittleEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libLittle.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nesmy/Playground/LittleEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library libLittle.so"
 	cd /home/nesmy/Playground/LittleEngine/build/Little && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Little.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

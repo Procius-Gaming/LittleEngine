@@ -368,12 +368,35 @@ Little/CMakeFiles/Little.dir/src/Application.cpp.o: Little/CMakeFiles/Little.dir
   /usr/include/stdc-predef.h \
   /home/nesmy/Playground/LittleEngine/Little/include/Application.h \
   /home/nesmy/Playground/LittleEngine/Little/include/Events/Event.h \
+  /home/nesmy/Playground/LittleEngine/Little/include/Events/ApplicationEvent.h \
   /home/nesmy/Playground/LittleEngine/Little/include/Window.h \
-  /home/nesmy/Playground/LittleEngine/Little/include/Events/ApplicationEvent.h
+  /home/nesmy/Playground/LittleEngine/Little/include/LayerStack.h \
+  /home/nesmy/Playground/LittleEngine/Little/include/Layer.h \
+  /usr/include/c++/11/vector \
+  /home/nesmy/Playground/LittleEngine/vendor/glfw/include/GLFW/glfw3.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
+  /usr/include/GL/gl.h \
+  /usr/include/GL/glext.h \
+  /home/nesmy/Playground/LittleEngine/vendor/glad/include/KHR/khrplatform.h
 
 Little/CMakeFiles/Little.dir/src/Core.cpp.o: Little/CMakeFiles/Little.dir/cmake_pch.hxx \
   /home/nesmy/Playground/LittleEngine/Little/src/Core.cpp \
   /usr/include/stdc-predef.h
+
+Little/CMakeFiles/Little.dir/src/Layer.cpp.o: Little/CMakeFiles/Little.dir/cmake_pch.hxx \
+  /home/nesmy/Playground/LittleEngine/Little/src/Layer.cpp \
+  /usr/include/stdc-predef.h \
+  /home/nesmy/Playground/LittleEngine/Little/include/Layer.h \
+  /home/nesmy/Playground/LittleEngine/Little/include/Events/Event.h
+
+Little/CMakeFiles/Little.dir/src/LayerStack.cpp.o: Little/CMakeFiles/Little.dir/cmake_pch.hxx \
+  /home/nesmy/Playground/LittleEngine/Little/src/LayerStack.cpp \
+  /usr/include/stdc-predef.h \
+  /home/nesmy/Playground/LittleEngine/Little/include/LayerStack.h \
+  /home/nesmy/Playground/LittleEngine/Little/include/Layer.h \
+  /home/nesmy/Playground/LittleEngine/Little/include/Events/Event.h \
+  /usr/include/c++/11/vector
 
 Little/CMakeFiles/Little.dir/src/Log.cpp.o: Little/CMakeFiles/Little.dir/cmake_pch.hxx \
   /home/nesmy/Playground/LittleEngine/Little/src/Log.cpp \
@@ -400,21 +423,23 @@ Little/CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o: Little/CMak
 
 /home/nesmy/Playground/LittleEngine/Little/include/Events/MouseEvent.h:
 
-/home/nesmy/Playground/LittleEngine/vendor/glad/include/KHR/khrplatform.h:
-
-/usr/include/GL/glext.h:
-
-/home/nesmy/Playground/LittleEngine/vendor/glfw/include/GLFW/glfw3.h:
-
 /home/nesmy/Playground/LittleEngine/Little/src/Platform/OpenGL/OpenGLWindow.cpp:
 
 /home/nesmy/Playground/LittleEngine/vendor/spdlog/include/spdlog/sinks/stdout_color_sinks-inl.h:
 
 /home/nesmy/Playground/LittleEngine/vendor/spdlog/include/spdlog/sinks/stdout_color_sinks.h:
 
-/home/nesmy/Playground/LittleEngine/Little/include/Events/ApplicationEvent.h:
+/home/nesmy/Playground/LittleEngine/Little/src/Layer.cpp:
+
+/home/nesmy/Playground/LittleEngine/vendor/glad/include/KHR/khrplatform.h:
+
+/usr/include/GL/glext.h:
+
+/home/nesmy/Playground/LittleEngine/vendor/glfw/include/GLFW/glfw3.h:
 
 /home/nesmy/Playground/LittleEngine/Little/include/Window.h:
+
+/home/nesmy/Playground/LittleEngine/Little/include/Events/ApplicationEvent.h:
 
 /home/nesmy/Playground/LittleEngine/Little/src/Application.cpp:
 
@@ -539,6 +564,8 @@ Little/CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o: Little/CMak
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/home/nesmy/Playground/LittleEngine/Little/include/LayerStack.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
@@ -778,6 +805,8 @@ Little/CMakeFiles/Little.dir/cmake_pch.hxx.cxx:
 
 /usr/include/c++/11/bits/stream_iterator.h:
 
+/home/nesmy/Playground/LittleEngine/Little/src/LayerStack.cpp:
+
 /usr/include/c++/11/bits/std_thread.h:
 
 /usr/include/c++/11/bits/cpp_type_traits.h:
@@ -827,6 +856,8 @@ Little/CMakeFiles/Little.dir/cmake_pch.hxx:
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
 /usr/include/c++/11/bits/functexcept.h:
+
+/home/nesmy/Playground/LittleEngine/Little/include/Layer.h:
 
 /usr/include/c++/11/streambuf:
 

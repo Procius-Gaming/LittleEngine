@@ -238,6 +238,54 @@ src/Core.cpp.s:
 	cd /home/nesmy/Playground/LittleEngine/build && $(MAKE) $(MAKESILENT) -f Little/CMakeFiles/Little.dir/build.make Little/CMakeFiles/Little.dir/src/Core.cpp.s
 .PHONY : src/Core.cpp.s
 
+src/Layer.o: src/Layer.cpp.o
+.PHONY : src/Layer.o
+
+# target to build an object file
+src/Layer.cpp.o:
+	cd /home/nesmy/Playground/LittleEngine/build && $(MAKE) $(MAKESILENT) -f Little/CMakeFiles/Little.dir/build.make Little/CMakeFiles/Little.dir/src/Layer.cpp.o
+.PHONY : src/Layer.cpp.o
+
+src/Layer.i: src/Layer.cpp.i
+.PHONY : src/Layer.i
+
+# target to preprocess a source file
+src/Layer.cpp.i:
+	cd /home/nesmy/Playground/LittleEngine/build && $(MAKE) $(MAKESILENT) -f Little/CMakeFiles/Little.dir/build.make Little/CMakeFiles/Little.dir/src/Layer.cpp.i
+.PHONY : src/Layer.cpp.i
+
+src/Layer.s: src/Layer.cpp.s
+.PHONY : src/Layer.s
+
+# target to generate assembly for a file
+src/Layer.cpp.s:
+	cd /home/nesmy/Playground/LittleEngine/build && $(MAKE) $(MAKESILENT) -f Little/CMakeFiles/Little.dir/build.make Little/CMakeFiles/Little.dir/src/Layer.cpp.s
+.PHONY : src/Layer.cpp.s
+
+src/LayerStack.o: src/LayerStack.cpp.o
+.PHONY : src/LayerStack.o
+
+# target to build an object file
+src/LayerStack.cpp.o:
+	cd /home/nesmy/Playground/LittleEngine/build && $(MAKE) $(MAKESILENT) -f Little/CMakeFiles/Little.dir/build.make Little/CMakeFiles/Little.dir/src/LayerStack.cpp.o
+.PHONY : src/LayerStack.cpp.o
+
+src/LayerStack.i: src/LayerStack.cpp.i
+.PHONY : src/LayerStack.i
+
+# target to preprocess a source file
+src/LayerStack.cpp.i:
+	cd /home/nesmy/Playground/LittleEngine/build && $(MAKE) $(MAKESILENT) -f Little/CMakeFiles/Little.dir/build.make Little/CMakeFiles/Little.dir/src/LayerStack.cpp.i
+.PHONY : src/LayerStack.cpp.i
+
+src/LayerStack.s: src/LayerStack.cpp.s
+.PHONY : src/LayerStack.s
+
+# target to generate assembly for a file
+src/LayerStack.cpp.s:
+	cd /home/nesmy/Playground/LittleEngine/build && $(MAKE) $(MAKESILENT) -f Little/CMakeFiles/Little.dir/build.make Little/CMakeFiles/Little.dir/src/LayerStack.cpp.s
+.PHONY : src/LayerStack.cpp.s
+
 src/Log.o: src/Log.cpp.o
 .PHONY : src/Log.o
 
@@ -308,6 +356,12 @@ help:
 	@echo "... src/Core.o"
 	@echo "... src/Core.i"
 	@echo "... src/Core.s"
+	@echo "... src/Layer.o"
+	@echo "... src/Layer.i"
+	@echo "... src/Layer.s"
+	@echo "... src/LayerStack.o"
+	@echo "... src/LayerStack.i"
+	@echo "... src/LayerStack.s"
 	@echo "... src/Log.o"
 	@echo "... src/Log.i"
 	@echo "... src/Log.s"

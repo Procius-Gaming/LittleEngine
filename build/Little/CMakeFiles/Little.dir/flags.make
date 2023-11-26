@@ -14,6 +14,10 @@ CXX_FLAGS = -fPIC -std=gnu++14
 
 # PCH options: Little/CMakeFiles/Little.dir/src/Core.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx
 
+# PCH options: Little/CMakeFiles/Little.dir/src/Layer.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx
+
+# PCH options: Little/CMakeFiles/Little.dir/src/LayerStack.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx
+
 # PCH options: Little/CMakeFiles/Little.dir/src/Log.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx
 
 # PCH options: Little/CMakeFiles/Little.dir/src/Platform/OpenGL/OpenGLWindow.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/nesmy/Playground/LittleEngine/build/Little/CMakeFiles/Little.dir/cmake_pch.hxx

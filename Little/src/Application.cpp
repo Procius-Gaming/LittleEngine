@@ -2,6 +2,8 @@
 
 #include "Log.h"
 
+#include <GLFW/glfw3.h>
+
 namespace Little {
 		
 	#define BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
@@ -23,18 +25,24 @@ namespace Little {
 
 	void Application::PushOverlay(Layer* overlay)
 	{
-		m_LayerStack.PushOverlay(layer);
+		m_LayerStack.PushOverlay(overlay);
 	}
 
 
-		void Application::Run()
-		{
+	void Application::Run()
+	{
 			
-			while(m_Running)
-			{
-				m_Window->OnUpdate();
-			}
+		while(m_Running)
+		{
+			//glClearColor(1,0,1,1);
+			//glClear(GL_COLOR_BUFFER_BIT);
+
+			for (Layer* layer : m_LayerStack)
+				layer->OnUpdate();
+
+			m_Window->OnUpdate();
 		}
+	}
 
         void Application::OnEvent(Event &e)
         {
