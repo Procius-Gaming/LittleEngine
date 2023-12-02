@@ -1,8 +1,11 @@
 #include "lepch.h"
 #include "Platform/OpenGL/OpenGLWindow.h"
+
 #include "Events/KeyEvent.h"
 #include "Events/MouseEvent.h"
 #include "Events/ApplicationEvent.h"
+
+#include <glad/glad.h>
 
 
 namespace Little {
@@ -46,6 +49,8 @@ namespace Little {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		//LE_CORE_ASSERT(status, "Failed to init glad");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

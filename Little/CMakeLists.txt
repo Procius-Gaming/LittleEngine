@@ -26,6 +26,7 @@ add_compile_definitions(UNICODE
 
 add_subdirectory(../vendor/glad glad)
 add_subdirectory(../vendor/glfw glfw)
+add_subdirectory(../vendor/imgui imgui)
 
 
 target_include_directories(${PROJECT_NAME}
@@ -35,13 +36,14 @@ target_include_directories(${PROJECT_NAME}
 				PUBLIC ../vendor/glad/include
 				PUBLIC ../vendor/glfw/include
 				PUBLIC ../vendor/spdlog/include
+				PUBLIC ../vendor/imgui
 				)
 
 target_link_libraries(${PROJECT_NAME}
 				glad
 				${OPENGL_LIBRARIES}
 				glfw
-				#imgui
+				imgui
 				#glm
 				#assimp
 				)

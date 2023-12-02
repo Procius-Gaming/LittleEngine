@@ -18,7 +18,7 @@
 #endif
 
 #ifdef LE_ENABLE_ASSERTS
-	#if LE_PLATFORM_WINDOWS
+	#ifdef LE_PLATFORM_WINDOWS
 		#define LE_ASSERT(x, ...) { if(!(x)) {LE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); }}
     	#define LE_CORE_ASSERT(x, ...) { if(!(x)) { LE_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
 	#elif LE_PLATFORM_LINUX

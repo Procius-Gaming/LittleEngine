@@ -10,11 +10,11 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 add_subdirectory(../Little ../build/Little)
 
 if(UNIX)
-add_compile_definitions( LE_PLATFORM_LINUX LE_BUILD_DLL)
+	add_compile_definitions( LE_PLATFORM_LINUX LE_BUILD_DLL LE_ENABLE_ASSERTS)
 endif(UNIX)
 
 if(WIN32)
-add_compile_definitions( LE_PLATFORM_LINUX LE_BUILD_DLL)
+	add_compile_definitions( LE_PLATFORM_WINDOWS LE_BUILD_DLL LE_ENABLE_ASSERTS)
 endif(WIN32)
 
 if(WIN32)
