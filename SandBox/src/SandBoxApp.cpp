@@ -10,12 +10,12 @@ public:
 
 	void OnUpdate() override
 	{
-		LE_INFO("ExampleLayer::Update");
+		//LE_INFO("ExampleLayer::Update");
 	}
 
 	void OnEvent(Little::Event& event) override
 	{
-		LE_TRACE("{0}", event);
+		LE_TRACE("TEST@,{0}", event);
 	}
 };
 
