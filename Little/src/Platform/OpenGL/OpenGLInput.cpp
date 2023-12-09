@@ -1,6 +1,5 @@
 #include "lepch.h"
 #include "Platform/OpenGL/OpenGLInput.h"
-#include "OpenGLInput.h"
 
 #include <GLFW/glfw3.h>
 #include "Application.h"

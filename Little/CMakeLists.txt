@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.2)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
+if(UNIX)
+add_compile_options(-fPIC)
+endif()
 
 project(Little)
 
@@ -32,7 +35,7 @@ add_subdirectory(../vendor/imgui imgui)
 target_include_directories(${PROJECT_NAME}
 				PUBLIC include
 				PUBLIC include/Events
-				PUBLIC inlcude/Platform
+				PUBLIC inlcude/Platform/OpenGL
 				PUBLIC ../vendor/glad/include
 				PUBLIC ../vendor/glfw/include
 				PUBLIC ../vendor/spdlog/include
