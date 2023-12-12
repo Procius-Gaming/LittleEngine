@@ -11,11 +11,13 @@ public:
 	void OnUpdate() override
 	{
 		//LE_INFO("ExampleLayer::Update");
+		if (Little::Input::IsKeyPressed(LE_KEY_TAB))
+			LE_INFO("TAB IS PRESSED");
 	}
 
 	void OnEvent(Little::Event& event) override
 	{
-		LE_TRACE("TEST@,{0}", event);
+		
 	}
 };
 
@@ -28,7 +30,6 @@ public:
 	SandBox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Little::ImGuiLayer());
     }
 
 	~SandBox()

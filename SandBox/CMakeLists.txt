@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2)
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 project(SandBox)
 
@@ -17,13 +17,21 @@ if(WIN32)
 	add_compile_definitions( LE_PLATFORM_WINDOWS LE_BUILD_DLL LE_ENABLE_ASSERTS)
 endif(WIN32)
 
-if(WIN32)
+#if(WIN32)
+#add_custom_command(
+#    TARGET ${PROJECT_NAME} POST_BUILD 
+#    COMMAND ${CMAKE_COMMAND} -E copy "../build/Little/libLittle.dll" "../build"
+#    COMMENT "Copying dll to build directory"
+#)
+#endif(WIN32)
+
+if (CMAKE_GENERATOR MATCHES "Visual Studio")
 add_custom_command(
-    TARGET ${PROJECT_NAME} POST_BUILD 
-    COMMAND ${CMAKE_COMMAND} -E copy "../build/Little/libLittle.dll" "../build"
-    COMMENT "Copying dll to build directory"
+	TARGET ${PROJECT_NAME} POST_BUILD 
+    COMMAND ${CMAKE_COMMAND} -E copy "../build/Little/libLittle.dll" "test"
+    COMMENT "Copying dll to build directory vstudio"
 )
-endif(WIN32)
+endif()
 
 
 target_include_directories(${PROJECT_NAME}

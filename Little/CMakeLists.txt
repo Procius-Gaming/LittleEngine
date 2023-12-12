@@ -10,7 +10,7 @@ project(Little)
 set(HEADER_FILES
     include/lepch.h)
 
-file(GLOB SOURCES src/**.cpp src/Platform/OpenGL/**.cpp)
+file(GLOB SOURCES src/**.cpp src/Platform/OpenGL/**.cpp ../vendor/glm/glm/**.hpp, ../vendor/glm/glm/**.inl)
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
@@ -40,6 +40,7 @@ target_include_directories(${PROJECT_NAME}
 				PUBLIC ../vendor/glfw/include
 				PUBLIC ../vendor/spdlog/include
 				PUBLIC ../vendor/imgui
+				PUBLIC ../vendor/glm
 				)
 
 target_link_libraries(${PROJECT_NAME}
