@@ -12,13 +12,13 @@ set(HEADER_FILES
 
 file(GLOB SOURCES src/**.cpp src/Platform/OpenGL/**.cpp ../vendor/glm/glm/**.hpp, ../vendor/glm/glm/**.inl)
 
-add_library(${PROJECT_NAME} SHARED ${SOURCES})
+add_library(${PROJECT_NAME} STATIC ${SOURCES})
 
 target_precompile_headers(${PROJECT_NAME} PRIVATE ${HEADER_FILES})
 
 
 #if(UNIX)
-add_compile_definitions(UNICODE
+add_compile_definitions(UNICODE _CRT_SECURE_NO_WARNINGS
 #LE_PLATFORM_LINUX LE_BUILD_DLL
 )
 #endif(UNIX)

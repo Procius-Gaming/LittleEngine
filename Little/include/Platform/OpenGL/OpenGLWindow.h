@@ -1,9 +1,10 @@
 #pragma once
 
 #include "Window.h"
+#include "Renderer/GraphicsContext.h"
 
-#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
+
 
 namespace Little {
 
@@ -29,6 +30,7 @@ namespace Little {
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{
