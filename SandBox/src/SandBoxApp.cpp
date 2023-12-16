@@ -120,8 +120,10 @@ public:
 		
 	}
 
-	void OnUpdate() override
+	void OnUpdate(Little::Timestep ts) override
 	{
+		LE_TRACE("Delta time: {0}s, ({1}s)", ts.GetSeconds(), ts.GetMiliseconds());
+
 		Little::RenderCommand::SetClearColor({0.1f, 0.1f, 0.1f, 1});
 		Little::RenderCommand::Clear();
 
@@ -136,19 +138,19 @@ public:
 		Little::Renderer::EndScene();
 
 		if (Little::Input::IsKeyPressed(LE_KEY_LEFT))
-			m_CameraPosition.x -= m_cameraSpeed;
+			m_CameraPosition.x += m_cameraSpeed * ts;
 		else if (Little::Input::IsKeyPressed(LE_KEY_RIGHT))
-			m_CameraPosition.x += m_cameraSpeed;
+			m_CameraPosition.x -= m_cameraSpeed * ts;
 
 		if (Little::Input::IsKeyPressed(LE_KEY_UP))
-			m_CameraPosition.y -= m_cameraSpeed;
+			m_CameraPosition.y -= m_cameraSpeed * ts;
 		else if (Little::Input::IsKeyPressed(LE_KEY_DOWN))
-			m_CameraPosition.y += m_cameraSpeed;
+			m_CameraPosition.y += m_cameraSpeed * ts;
 
 		if (Little::Input::IsKeyPressed(LE_KEY_Q))
-			m_CameraRotation -= m_CameraRotationSpeed;
+			m_CameraRotation -= m_CameraRotationSpeed * ts;
 		else if ( Little::Input::IsKeyPressed(LE_KEY_E))
-			m_CameraRotation += m_CameraRotationSpeed;
+			m_CameraRotation += m_CameraRotationSpeed * ts;
 	}
 
 	void OnImGuiRender() override
@@ -169,10 +171,10 @@ private:
 
 	Little::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
-	float m_cameraSpeed = 0.1f;
+	float m_cameraSpeed = 5.0f;
 
 	float m_CameraRotation = 0.0f;
-	float m_CameraRotationSpeed = 0.5f;
+	float m_CameraRotationSpeed = 180.0f;
 };
 
 
