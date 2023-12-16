@@ -17,15 +17,15 @@ add_library(${PROJECT_NAME} STATIC ${SOURCES})
 target_precompile_headers(${PROJECT_NAME} PRIVATE ${HEADER_FILES})
 
 
-#if(UNIX)
+if(UNIX)
 add_compile_definitions(UNICODE _CRT_SECURE_NO_WARNINGS
-#LE_PLATFORM_LINUX LE_BUILD_DLL
+LE_PLATFORM_LINUX LE_ENABLE_ASSERTS
 )
-#endif(UNIX)
+endif(UNIX)
 
-#if(WIN32)
-#add_compile_definitions(UNICODE LE_PLATFORM_LINUX LE_BUILD_DLL)
-#endif(WIN32)
+if(WIN32)
+add_compile_definitions(UNICODE LE_PLATFORM_WINDOWS _CRT_SECURE_NO_WARNINGS LE_ENABLE_ASSERTS )
+endif(WIN32)
 
 add_subdirectory(../vendor/glad glad)
 add_subdirectory(../vendor/glfw glfw)
