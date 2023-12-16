@@ -95,7 +95,7 @@ public:
 
 			layout(location = 0) in vec3 a_Position;
 
-			unifrom mat4 u_ViewProjection;
+			uniform mat4 u_ViewProjection;
 			
 			void main()
 			{
