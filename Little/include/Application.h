@@ -13,6 +13,8 @@
 #include "Renderer/Buffer.h"
 #include "Renderer/VertexArray.h"
 
+#include "Renderer/Camera.h"
+
 
 namespace Little {
 
@@ -43,6 +45,8 @@ namespace Little {
 
 		std::shared_ptr<Shader> m_Shader2;
 		std::shared_ptr<VertexArray> m_SquareVA;
+
+		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};

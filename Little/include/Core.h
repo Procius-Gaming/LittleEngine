@@ -25,6 +25,7 @@
     #pragma warning Unknown dynamic link import/export semantics.
 #endif
 
+#include "embed_breakpoint.h"
 #ifdef LE_ENABLE_ASSERTS
 	#ifdef LE_PLATFORM_WINDOWS
 		#define LE_ASSERT(x, ...) { if(!(x)) {LE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); }}

@@ -12,8 +12,8 @@ namespace Little {
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::None:		LE_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::OpenGl:	return new OpenGLVertexBuffer(vertices, size);
+		case RendererAPI::API::None:		LE_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
+		case RendererAPI::API::OpenGl:	return new OpenGLVertexBuffer(vertices, size);
 		}
 
 		LE_CORE_ASSERT(false, "Unknown RenderAPI");
@@ -24,8 +24,8 @@ namespace Little {
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::None:		LE_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::OpenGl:	return new OpenGLIndexBuffer(indices, size);
+		case RendererAPI::API::None:		LE_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
+		case RendererAPI::API::OpenGl:	return new OpenGLIndexBuffer(indices, size);
 		}
 
 		LE_CORE_ASSERT(false, "Unknown RenderAPI");
