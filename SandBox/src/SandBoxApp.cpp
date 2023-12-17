@@ -113,9 +113,11 @@ public:
 
 			layout(location = 0) out vec4 color;
 			
+			uniform vec4 u_Color;
+			
 			void main()
 			{
-				color = vec4(0.2, 0.3, 0.8, 1.0);
+				color = u_Color;
 			}
 			
 		)";
@@ -136,7 +138,11 @@ public:
 
 		Little::Renderer::BeginScene(m_Camera);
 
+		glm::vec4 redColor(0.8f, 0.2f, 0.3f, 1.0f);
+		glm::vec4 blueColor(0.2f, 0.3f, 0.8f, 1.0f);
 		static glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
+
+		Little::Material* material = new Little::Material(m_Shader2);
 		
 		for (int y = 0; y < 20; y++)
 		{
@@ -144,6 +150,10 @@ public:
 			{
 				glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
 				glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;
+				if (x % 2 == 0)
+					m_Shader2->UploadUniformFloat4("u_Color", redColor);
+				else
+					m_Shader2->UploadUniformFloat4("u_Color", blueColor);
 				Little::Renderer::Submit(m_Shader2, m_SquareVA, transform);
 			}
 		}
