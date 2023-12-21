@@ -39,18 +39,19 @@ public:
 		
 		m_SquareVA.reset(Little::VertexArray::Create());
 
-		float squareVertices[3 * 4] = {
-			-0.5f, -0.5f, 0.0f,
-			 0.5f, -0.5f, 0.0f,
-			 0.5f,  0.5f, 0.0f,
-			-0.5f,  0.5f, 0.0f
+		float squareVertices[5 * 4] = {
+			-0.5f, -0.5f, 0.0f, 0.0f, 0.0f,
+			 0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
+			 0.5f,  0.5f, 0.0f, 1.0f, 1.0f,
+			-0.5f,  0.5f, 0.0f, 0.0f, 1.0f
 		};
 
 		Little::Ref<Little::VertexBuffer> squareVB;
 		squareVB.reset(Little::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 
 		squareVB->SetLayout({
-			{Little::ShaderDataType::Float3, "a_Position"}
+			{Little::ShaderDataType::Float3, "a_Position"},
+			{Little::ShaderDataType::Float2, "a_TexCoord"}
 			});
 		m_SquareVA->AddVertexBuffer(squareVB);
 
@@ -129,6 +130,42 @@ public:
 
 		m_Shader2.reset(Little::Shader::Create(vertexSrc2, fragmentSrc2));
 		
+		std::string vertexSrc3 = R"(
+			#version 330 core
+
+			layout(location = 0) in vec3 a_Position;
+			layout(location = 1) in vec2 a_TexCoord;
+
+			uniform mat4 u_ViewProjection;
+			uniform mat4 u_Transform;
+
+			out vec2 v_TexCoord;
+			
+			void main()
+			{
+				v_TexCoord = a_TexCoord
+				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
+			}
+			
+		)";
+
+		std::string fragmentSrc3 = R"(
+			#version 330 core
+
+			layout(location = 0) out vec4 color;
+			
+			in vec2 v_TexCood;
+
+			uniform vec3 u_Color;
+			
+			void main()
+			{
+				color = vec4(u_Color, 1.0);
+			}
+			
+		)";
+
+		m_TextureShader.reset(Little::Shader::Create(vertexSrc3, fragmentSrc3));
 	}
 
 	void OnUpdate(Little::Timestep ts) override
@@ -158,7 +195,10 @@ public:
 			}
 		}
 
-		Little::Renderer::Submit(m_Shader, m_VertexArray);
+		Little::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+
+		//triangle
+		//Little::Renderer::Submit(m_Shader, m_VertexArray);
 
 		Little::Renderer::EndScene();
 
@@ -194,7 +234,7 @@ private:
 	Little::Ref<Little::Shader> m_Shader;
 	Little::Ref<Little::VertexArray> m_VertexArray;
 
-	Little::Ref<Little::Shader> m_Shader2;
+	Little::Ref<Little::Shader> m_Shader2, m_TextureShader;
 	Little::Ref<Little::VertexArray> m_SquareVA;
 
 	Little::OrthographicCamera m_Camera;
