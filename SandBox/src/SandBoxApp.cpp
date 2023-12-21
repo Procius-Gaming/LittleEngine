@@ -21,7 +21,7 @@ public:
 			 0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 
-		std::shared_ptr<Little::VertexBuffer> vertexBuffer;
+		Little::Ref<Little::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(Little::VertexBuffer::Create(vertices, sizeof(vertices)));
 
 		Little::BufferLayout layout = {
@@ -33,7 +33,7 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<Little::IndexBuffer> indexBuffer;
+		Little::Ref<Little::IndexBuffer> indexBuffer;
 		indexBuffer.reset(Little::IndexBuffer::Create(indices, 3));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 		
@@ -46,7 +46,7 @@ public:
 			-0.5f,  0.5f, 0.0f
 		};
 
-		std::shared_ptr<Little::VertexBuffer> squareVB;
+		Little::Ref<Little::VertexBuffer> squareVB;
 		squareVB.reset(Little::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 
 		squareVB->SetLayout({
@@ -55,7 +55,7 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<Little::IndexBuffer> squareIB;
+		Little::Ref<Little::IndexBuffer> squareIB;
 		squareIB.reset(Little::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
@@ -191,11 +191,11 @@ public:
 		
 	}
 private:
-	std::shared_ptr<Little::Shader> m_Shader;
-	std::shared_ptr<Little::VertexArray> m_VertexArray;
+	Little::Ref<Little::Shader> m_Shader;
+	Little::Ref<Little::VertexArray> m_VertexArray;
 
-	std::shared_ptr<Little::Shader> m_Shader2;
-	std::shared_ptr<Little::VertexArray> m_SquareVA;
+	Little::Ref<Little::Shader> m_Shader2;
+	Little::Ref<Little::VertexArray> m_SquareVA;
 
 	Little::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <memory>
+
 #ifdef LE_PLATFORM_WINDOWS
 #if LE_DYNAMIC_LINK
 				#ifdef LE_BUILD_DLL
@@ -41,3 +43,12 @@
 #define BIT(x) (1 << x)
 
 #define LE_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
+
+namespace Little {
+
+	template<typename T>
+	using Scope = std::unique_ptr<T>;
+
+	template<typename T>
+	using Ref = std::shared_ptr<T>;
+}
