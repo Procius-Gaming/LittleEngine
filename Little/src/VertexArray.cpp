@@ -8,12 +8,12 @@
 namespace Little {
 
 
-	Ref<VertexArray> VertexArray::Create()
+	VertexArray* VertexArray::Create()
 	{
 		switch (Renderer::GetAPI())
 		{
 		case RendererAPI::API::None:		LE_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::API::OpenGl:	return std::make_shared<OpenGLVertexArray>();
+		case RendererAPI::API::OpenGl:	return new OpenGLVertexArray();
 		}
 
 		LE_CORE_ASSERT(false, "Unknown RenderAPI");

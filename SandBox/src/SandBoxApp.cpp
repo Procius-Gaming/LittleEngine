@@ -143,7 +143,7 @@ public:
 			
 			void main()
 			{
-				v_TexCoord = a_TexCoord
+				v_TexCoord = a_TexCoord;
 				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
 			}
 			
@@ -154,7 +154,7 @@ public:
 
 			layout(location = 0) out vec4 color;
 			
-			in vec2 v_TexCood;
+			in vec2 v_TexCoord;
 
 			uniform sampler2D u_Texture;
 			
@@ -167,7 +167,7 @@ public:
 
 		m_TextureShader.reset(Little::Shader::Create(vertexSrc3, fragmentSrc3));
 
-		m_Texture = Little::Texture2D::Create("../../assets/texture/chess.png");
+		m_Texture = Little::Texture2D::Create("assets/textures/chess.png");
 
 		std::dynamic_pointer_cast<Little::OpenGLShader>(m_TextureShader)->Bind();
 		std::dynamic_pointer_cast<Little::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
