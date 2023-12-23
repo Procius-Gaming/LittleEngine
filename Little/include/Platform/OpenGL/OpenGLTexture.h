@@ -11,10 +11,10 @@ namespace Little {
 		OpenGLTexture2D(const std::string& path);
 		virtual ~OpenGLTexture2D() override;
 
-		virtual uin32_t GetWidth() override { return m_Width; }
-		virtual uin32_t GetHeight() override { return m_Height; }
+		virtual uint32_t GetWidth() const override { return m_Width; }
+		virtual uint32_t GetHeight() const override { return m_Height; }
 
-		virtual void Bind() override;
+		virtual void Bind(uint32_t slot = 0) const override;
 	private:
 		std::string m_Path;
 		uint32_t m_Width, m_Height;

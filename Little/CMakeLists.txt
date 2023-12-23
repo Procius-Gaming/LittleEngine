@@ -10,7 +10,7 @@ project(Little)
 set(HEADER_FILES
     include/lepch.h)
 
-file(GLOB SOURCES src/**.cpp src/Platform/OpenGL/**.cpp ../vendor/glm/glm/**.hpp, ../vendor/glm/glm/**.inl)
+file(GLOB SOURCES src/**.cpp src/Platform/OpenGL/**.cpp ../vendor/glm/glm/**.hpp ../vendor/glm/glm/**.inl ../vendor/stb_image/stb_image.h ../vendor/stb_image/stb_image.cpp)
 
 add_library(${PROJECT_NAME} STATIC ${SOURCES})
 
@@ -24,7 +24,7 @@ LE_PLATFORM_LINUX LE_ENABLE_ASSERTS
 endif(UNIX)
 
 if(WIN32)
-add_compile_definitions(UNICODE LE_PLATFORM_WINDOWS _CRT_SECURE_NO_WARNINGS LE_ENABLE_ASSERTS )
+add_compile_definitions(UNICODE LE_PLATFORM_WINDOWS _CRT_SECURE_NO_WARNINGS LE_ENABLE_ASSERTS _VARIADIC_MAX )
 endif(WIN32)
 
 add_subdirectory(../vendor/glad glad)
@@ -41,6 +41,7 @@ target_include_directories(${PROJECT_NAME}
 				PUBLIC ../vendor/spdlog/include
 				PUBLIC ../vendor/imgui
 				PUBLIC ../vendor/glm
+				PUBLIC ../vendor/stb_image
 				)
 
 target_link_libraries(${PROJECT_NAME}

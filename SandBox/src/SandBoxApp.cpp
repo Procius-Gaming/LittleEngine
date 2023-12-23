@@ -156,16 +156,21 @@ public:
 			
 			in vec2 v_TexCood;
 
-			uniform vec3 u_Color;
+			uniform sampler2D u_Texture;
 			
 			void main()
 			{
-				color = vec4(u_Color, 1.0);
+				color = texture(u_Texture, v_TexCoord);
 			}
 			
 		)";
 
 		m_TextureShader.reset(Little::Shader::Create(vertexSrc3, fragmentSrc3));
+
+		m_Texture = Little::Texture2D::Create("../../assets/texture/chess.png");
+
+		std::dynamic_pointer_cast<Little::OpenGLShader>(m_TextureShader)->Bind();
+		std::dynamic_pointer_cast<Little::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(Little::Timestep ts) override
@@ -194,6 +199,8 @@ public:
 				Little::Renderer::Submit(m_Shader2, m_SquareVA, transform);
 			}
 		}
+
+		m_Texture->Bind();
 
 		Little::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
@@ -236,6 +243,8 @@ private:
 
 	Little::Ref<Little::Shader> m_Shader2, m_TextureShader;
 	Little::Ref<Little::VertexArray> m_SquareVA;
+
+	Little::Ref<Little::Texture2D> m_Texture;
 
 	Little::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
