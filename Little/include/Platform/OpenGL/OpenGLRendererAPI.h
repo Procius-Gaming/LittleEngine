@@ -7,8 +7,6 @@ namespace Little {
     class OpenGLRendererAPI : public RendererAPI
     {
     public:
-        OpenGLRendererAPI();
-
         virtual void Init() override;
 
         virtual void Clear() override;
