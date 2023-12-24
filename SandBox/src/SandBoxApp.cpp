@@ -98,6 +98,7 @@ public:
 		)";
 
 		m_Shader.reset(Little::Shader::Create(vertexSrc, fragmentSrc));
+		Little::Shader::Create("assets/shaders/Texture.glsl");
 
 		std::string vertexSrc2 = R"(
 			#version 330 core
@@ -175,7 +176,7 @@ public:
 
 	void OnUpdate(Little::Timestep ts) override
 	{
-		LE_TRACE("Delta time: {0}s, ({1}s)", ts.GetSeconds(), ts.GetMiliseconds());
+		//LE_TRACE("Delta time: {0}s, ({1}s)", ts.GetSeconds(), ts.GetMiliseconds());
 
 		Little::RenderCommand::SetClearColor({0.1f, 0.1f, 0.1f, 1});
 		Little::RenderCommand::Clear();

@@ -11,6 +11,11 @@ add_subdirectory(../Little ../build/Little)
 
 if(UNIX)
 	add_compile_definitions( LE_PLATFORM_LINUX LE_ENABLE_ASSERTS)
+	add_custom_command(
+    TARGET ${PROJECT_NAME} POST_BUILD 
+    COMMAND ${CMAKE_COMMAND} -E copy_dirctory "assets" "../build/assets"
+    COMMENT "Copying assets to build directory"
+)
 endif(UNIX)
 
 if(WIN32)
