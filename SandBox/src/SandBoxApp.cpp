@@ -98,7 +98,6 @@ public:
 		)";
 
 		m_Shader.reset(Little::Shader::Create(vertexSrc, fragmentSrc));
-		Little::Shader::Create("assets/shaders/Texture.glsl");
 
 		std::string vertexSrc2 = R"(
 			#version 330 core
@@ -166,7 +165,9 @@ public:
 			
 		)";
 
-		m_TextureShader.reset(Little::Shader::Create(vertexSrc3, fragmentSrc3));
+		m_Shader2.reset(Little::Shader::Create(vertexSrc3, fragmentSrc3));
+
+		m_TextureShader.reset(Little::Shader::Create("assets/shaders/Texture.glsl"));
 
 		m_Texture = Little::Texture2D::Create("assets/textures/chess.png");
 

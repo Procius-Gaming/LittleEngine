@@ -1,6 +1,7 @@
 build
 /build
 ../build
+out
 .vscode
 .vs
 # Prerequisites
