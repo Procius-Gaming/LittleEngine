@@ -21,6 +21,7 @@ namespace Little {
 
 	OpenGLShader::OpenGLShader(const std::string& filepath)
 	{
+		//LE_INFO("{0}", filepath);
 		std::string source = ReadFile(filepath);
 		auto shaderSources = PreProcess(source);
 		Compile(shaderSources);
@@ -42,6 +43,7 @@ namespace Little {
 
 	std::string OpenGLShader::ReadFile(const std::string& filepath)
 	{
+		
 		std::string result;
 		std::ifstream in(filepath, std::ios::in, std::ios::binary);
 		if (in)
@@ -73,7 +75,7 @@ namespace Little {
 			LE_CORE_ASSERT(eol != std::string::npos, "Syntax error");
 			size_t begin = pos + typeTokenLength + 1;
 			std::string type = source.substr(begin, eol - begin);
-			LE_CORE_ASSERT(type == "vertex" || type == "fragment" || type == "pixel", "Invalid shader type specified");
+			LE_CORE_ASSERT(ShaderTypeFromString(type), "Invalid shader type specified");
 
 			size_t nextLinePos = source.find_first_not_of("\r\n", eol);
 			pos = source.find(typeToken, nextLinePos);
@@ -119,34 +121,28 @@ namespace Little {
 				LE_CORE_ASSERT(false, "shader compilation failure");
 				break;
 			}
-			glAttachShader(m_RendererID, shader);
+			glAttachShader(program, shader);
 			glShaderIDs.push_back(shader);
 
 		}
 
-
-		// Vertex and fragment shaders are successfully compiled.
-		// Now time to link them together into a program.
-		// Get a program object.
-		m_RendererID = program;
-
 		// Link our program
-		glLinkProgram(m_RendererID);
+		glLinkProgram(program);
 
 		// Note the different functions here: glGetProgram* instead of glGetShader*.
 		GLint isLinked = 0;
-		glGetProgramiv(m_RendererID, GL_LINK_STATUS, (int*)&isLinked);
+		glGetProgramiv(program, GL_LINK_STATUS, (int*)&isLinked);
 		if (isLinked == GL_FALSE)
 		{
 			GLint maxLength = 0;
-			glGetProgramiv(m_RendererID, GL_INFO_LOG_LENGTH, &maxLength);
+			glGetProgramiv(program, GL_INFO_LOG_LENGTH, &maxLength);
 
 			// The maxLength includes the NULL character
 			std::vector<GLchar> infoLog(maxLength);
-			glGetProgramInfoLog(m_RendererID, maxLength, &maxLength, &infoLog[0]);
+			glGetProgramInfoLog(program, maxLength, &maxLength, &infoLog[0]);
 
 			// We don't need the program anymore.
-			glDeleteProgram(m_RendererID);
+			glDeleteProgram(program);
 			// Don't leak shaders either.
 			for (auto id : glShaderIDs)
 				glDeleteShader(id);
@@ -158,8 +154,9 @@ namespace Little {
 
 		// Always detach shaders after a successful link.
 		for (auto id : glShaderIDs)
-			glDetachShader(m_RendererID, id);
+			glDetachShader(program, id);
 		
+		m_RendererID = program;
 	}
 
 
